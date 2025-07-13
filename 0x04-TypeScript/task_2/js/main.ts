@@ -1,12 +1,12 @@
 // Interfaces
 
-interface DirectorInterface {
+export interface DirectorInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
   workDirectorTasks(): string;
 }
 
-interface TeacherInterface {
+export interface TeacherInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
   workTeacherTasks(): string;
@@ -14,7 +14,7 @@ interface TeacherInterface {
 
 // Classes implementing the interfaces
 
-class Director implements DirectorInterface {
+export class Director implements DirectorInterface {
   workFromHome(): string {
     return "Working from home";
   }
@@ -26,7 +26,7 @@ class Director implements DirectorInterface {
   }
 }
 
-class Teacher implements TeacherInterface {
+export class Teacher implements TeacherInterface {
   workFromHome(): string {
     return "Cannot work from home";
   }
@@ -40,7 +40,7 @@ class Teacher implements TeacherInterface {
 
 // createEmployee function
 
-function createEmployee(salary: number | string): Director | Teacher {
+export function createEmployee(salary: number | string): Director | Teacher {
   // If salary is string, convert to number (removing $ if present)
   let numericSalary: number;
 
@@ -59,13 +59,13 @@ function createEmployee(salary: number | string): Director | Teacher {
 
 
 
-// Type predicate function
-function isDirector(employee: Director | Teacher): employee is Director {
+// Type predicate export function
+export function isDirector(employee: Director | Teacher): employee is Director {
   return (employee as Director).workDirectorTasks !== undefined;
 }
 
-// executeWork function
-function executeWork(employee: Director | Teacher): void {
+// executeWork export function
+export function executeWork(employee: Director | Teacher): void {
   if (isDirector(employee)) {
     console.log(employee.workDirectorTasks());
   } else {
@@ -74,10 +74,10 @@ function executeWork(employee: Director | Teacher): void {
 }
 
 // String literal type allowing only 'Math' or 'History'
-type Subjects = 'Math' | 'History';
+export type Subjects = 'Math' | 'History';
 
-// Function teachClass accepting only Subjects type
-function teachClass(todayClass: Subjects): string {
+// export Function teachClass accepting only Subjects type
+export function teachClass(todayClass: Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
   } else {
