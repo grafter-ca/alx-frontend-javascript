@@ -1,18 +1,18 @@
-interface student {
+interface Student {
   firstName: string;
   lastName: string;
   age: number;
   location: string;
 }
 
-const student1: student = {
+const student1: Student = {
   firstName: "John",
   lastName: "Doe",
   age: 20,
   location: "New York"
 };
 
-const student2: student = {
+const student2: Student = {
   firstName: "Jane",
   lastName: "Smith",
   age: 22,
@@ -23,7 +23,7 @@ const student2: student = {
 console.log(student1);
 console.log(student2);
 
-const studentsList: student[] = [student1, student2];
+const studentsList: Student[] = [student1, student2];
 
 /*
 Using Vanilla Javascript, render a table and for each elements in the array, append a new row to the table
