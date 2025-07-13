@@ -5,6 +5,7 @@ export interface Teacher  {
   yearsOfExperience?: number
   location: String
   contract: boolean
+  [TeacherId: string]: any; 
 }
 
 export interface Directors extends Teacher {
