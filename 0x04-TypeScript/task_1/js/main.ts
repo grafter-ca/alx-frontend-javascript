@@ -53,7 +53,7 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
 
 // Class 
 ////////////////////////////////////////////////
-// implementing the interface
+
 class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
