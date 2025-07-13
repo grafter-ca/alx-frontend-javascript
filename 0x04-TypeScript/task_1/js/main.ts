@@ -1,27 +1,28 @@
-interface Teacher  {
-  firstName: String
+export interface Teacher  {
+  readonly firstName: String
+  readonly lastName: String
   fullTimeEmployee: boolean
-  lastName: String
+  yearsOfExperience?: number
   location: String
   contract: boolean
 }
 
-interface Directors extends Teacher {
+export interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-interface printTeacherFunction {
+export interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Interface describing the constructor signature
-interface StudentClassConstructor {
+// export Interface describing the constructor signature
+export interface StudentClassConstructor {
   firstName: string;
   lastName: string;
 }
 
-// Interface describing the class
-interface StudentClassInterface {
+// export Interface describing the class
+export interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
