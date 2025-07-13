@@ -3,6 +3,9 @@
 import { RowID, RowElement } from './interface';
 import * as CRUD from './crud';
 
+/// This code demonstrates how to use the CRUD operations defined in the CRUD module
+// to manage a list of students in a table format.
+
 const row: RowElement = {
   firstName: "Guillaume",
   lastName: "Salva",
